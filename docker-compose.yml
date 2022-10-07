@@ -1,6 +1,7 @@
 version: '3.8'
 services:
   jupyter:
+    user: root
     build:
       context: .
       dockerfile: Dockerfile
@@ -10,3 +11,5 @@ services:
       - .:/home/jovyan
     environment:
       - JUPYTER_ENABLE_LAB=True
+      - CHOWN_HOME=yes
+      - CHOWN_HOME_OPTS=-R
