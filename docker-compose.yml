@@ -13,3 +13,6 @@ services:
       - JUPYTER_ENABLE_LAB=True
       - CHOWN_HOME=yes
       - CHOWN_HOME_OPTS=-R
+      - NB_UID=1002
+      - NB_GID=1002
+      - NB_USER=ubuntu
